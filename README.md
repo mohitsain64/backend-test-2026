@@ -1,90 +1,85 @@
 # Mohit Backend Project
 
 ## Project Description
-This project is developed as part of the Backend Development Assignment. It is a REST API-based backend application built using Node.js, Express.js and MongoDB.
 
-The application performs CRUD operations (Create, Read, Update and Delete) using MongoDB as the database.
+This project is created as part of my Backend Development Assignment.
+
+It is a REST API backend application that performs CRUD operations on Users and Posts using MongoDB.
 
 ## Technologies Used
+
 - Node.js
 - Express.js
 - MongoDB Atlas
 - Mongoose
 - Postman
-- JavaScript
 
-## Project Structure
+## Project Features
 
-```text
-src/
-├── config/
-│   └── database.js
-├── controllers/
-│   ├── postController.js
-│   └── userController.js
-├── models/
-│   ├── Post.js
-│   └── User.js
-├── routes/
-│   ├── postRoutes.js
-│   └── userRoutes.js
-├── app.js
-└── index.js
-
-.env
-.gitignore
-package.json
-README.md
-```
-
-## Installation
-
-1. Clone the repository.
-2. Open the project folder in VS Code.
-3. Install dependencies:
-
-```bash
-npm install
-```
-
-4. Create a `.env` file and configure your MongoDB connection string and PORT.
-
-## Run the Project
-
-For development:
-
-```bash
-npm run dev
-```
-
-For normal execution:
-
-```bash
-npm start
-```
+- Create User
+- Get All Users
+- Get User by ID
+- Update User
+- Delete User
+- Create Post
+- Get All Posts
+- Get Post by ID
+- Update Post
+- Delete Post
 
 ## API Endpoints
 
+### User Routes
+
+Base URL: `/api/users`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/users` | Create a new user |
+| GET | `/api/users` | Get all users |
+| GET | `/api/users/:id` | Get user by ID |
+| PUT | `/api/users/:id` | Update user |
+| DELETE | `/api/users/:id` | Delete user |
+
+### Post Routes
+
+Base URL: `/api/posts`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/posts` | Create a new post |
+| GET | `/api/posts` | Get all posts |
+| GET | `/api/posts/:id` | Get post by ID |
+| PUT | `/api/posts/:id` | Update post |
+| DELETE | `/api/posts/:id` | Delete post |
+
+## Installation and Setup
+
+1. Clone the repository.
+2. Install dependencies:
+
+   `npm install`
+
+3. Configure MongoDB connection in the `.env` file.
+
+4. Start the development server:
+
+   `npm run dev`
+
+## Server
+
+Default Port: 4000
+
 Base URL: `http://localhost:4000`
 
-| Method | Endpoint | Operation |
-|---|---|---|
-| POST | /api/users | Create User |
-| GET | /api/users | Get All Users |
-| GET | /api/users/:id | Get User By ID |
-| PUT | /api/users/:id | Update User |
-| DELETE | /api/users/:id | Delete User |
+## Testing
 
-## API Testing
-
-All user CRUD operations were tested successfully using Postman.
+All API endpoints were tested using Postman.
 
 ## Database
 
-MongoDB Atlas is used for cloud database storage, and Mongoose is used to define schemas and interact with MongoDB.
+MongoDB Atlas is used to store User and Post data.
 
 ## Author
 
 Mohit Sain
-
-B.Tech Computer Science Engineering
