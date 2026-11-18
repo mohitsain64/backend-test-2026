@@ -1,85 +1,140 @@
-# Mohit Backend Project
+# Mohit Backend CRUD API Project
 
-## Project Description
+## 1. Project Overview
 
-This project is created as part of my Backend Development Assignment.
+This project is developed as part of my Backend Development Assignment. It demonstrates the implementation of RESTful APIs using Node.js, Express.js and MongoDB.
 
-It is a REST API backend application that performs CRUD operations on Users and Posts using MongoDB.
+The project provides CRUD (Create, Read, Update and Delete) operations for managing users and posts.
 
-## Technologies Used
+## 2. Technologies Used
 
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- Postman
+- Node.js – JavaScript runtime environment
+- Express.js – Backend web framework
+- MongoDB – NoSQL database
+- Mongoose – MongoDB object modeling
+- Postman – API testing tool
+- Git & GitHub – Version control
 
-## Project Features
+## 3. Project Structure
 
-- Create User
-- Get All Users
-- Get User by ID
-- Update User
-- Delete User
-- Create Post
-- Get All Posts
-- Get Post by ID
-- Update Post
-- Delete Post
+```text
+mohit-backend-project/
+│
+├── src/
+│   ├── config/
+│   │   └── database.js
+│   │
+│   ├── controllers/
+│   │   ├── postController.js
+│   │   └── userController.js
+│   │
+│   ├── models/
+│   │   ├── Post.js
+│   │   └── User.js
+│   │
+│   ├── routes/
+│   │   ├── postRoutes.js
+│   │   └── userRoutes.js
+│   │
+│   ├── app.js
+│   └── index.js
+│
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+└── Mohit_Backend_CRUD_APIs.json
+```
 
-## API Endpoints
+## 4. Features
 
-### User Routes
+- Create new users
+- Retrieve all users
+- Retrieve a user by ID
+- Update user information
+- Delete users
+- Create and manage posts
+- MongoDB database connectivity
+- REST API testing using Postman
 
-Base URL: `/api/users`
+## 5. API Endpoints
+
+### User APIs
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/users` | Create a new user |
-| GET | `/api/users` | Get all users |
-| GET | `/api/users/:id` | Get user by ID |
-| PUT | `/api/users/:id` | Update user |
-| DELETE | `/api/users/:id` | Delete user |
+| POST | /api/users | Create a user |
+| GET | /api/users | Get all users |
+| GET | /api/users/:id | Get user by ID |
+| PUT | /api/users/:id | Update user |
+| DELETE | /api/users/:id | Delete user |
 
-### Post Routes
-
-Base URL: `/api/posts`
+### Post APIs
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/posts` | Create a new post |
-| GET | `/api/posts` | Get all posts |
-| GET | `/api/posts/:id` | Get post by ID |
-| PUT | `/api/posts/:id` | Update post |
-| DELETE | `/api/posts/:id` | Delete post |
+| POST | /api/posts | Create a post |
+| GET | /api/posts | Get all posts |
+| GET | /api/posts/:id | Get post by ID |
+| PUT | /api/posts/:id | Update post |
+| DELETE | /api/posts/:id | Delete post |
 
-## Installation and Setup
+## 6. Installation and Setup
 
-1. Clone the repository.
-2. Install dependencies:
+Step 1: Clone the repository.
 
-   `npm install`
+```bash
+git clone https://github.com/mohitsain64/backend-test-2026.git
+```
 
-3. Configure MongoDB connection in the `.env` file.
+Step 2: Open the project folder.
 
-4. Start the development server:
+```bash
+cd backend-test-2026
+```
 
-   `npm run dev`
+Step 3: Install dependencies.
 
-## Server
+```bash
+npm install
+```
 
-Default Port: 4000
+Step 4: Configure environment variables in `.env`.
 
-Base URL: `http://localhost:4000`
+```env
+PORT=4000
+MONGO_URI=your_mongodb_connection_string
+```
 
-## Testing
+Step 5: Start the server.
+
+```bash
+npm run dev
+```
+
+The backend server will run on:
+
+http://localhost:4000
+
+## 7. API Testing
 
 All API endpoints were tested using Postman.
 
-## Database
+The Postman collection is included in this repository:
 
-MongoDB Atlas is used to store User and Post data.
+`Mohit_Backend_CRUD_APIs.json`
 
-## Author
+It contains requests for creating, retrieving, updating and deleting users.
 
-Mohit Sain
+## 8. Database
+
+MongoDB is used to store application data, while Mongoose manages database models and operations.
+
+## 9. Author
+
+**Mohit Sain**
+
+B.Tech Computer Science Engineering
+
+BML Munjal University
